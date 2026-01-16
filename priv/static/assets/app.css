@@ -1,0 +1,61 @@
+/* Base application styles */
+/* Note: Most styling comes from Tailwind CSS via CDN */
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 17, 21, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(247, 147, 26, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(247, 147, 26, 0.5);
+}
+
+/* Focus states */
+*:focus {
+  outline-color: #F7931A;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Float animation for decorative elements */
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Grid pattern background */
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(rgba(247, 147, 26, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(247, 147, 26, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Holographic gradient */
+.bg-holographic {
+  background: linear-gradient(
+    135deg,
+    rgba(247, 147, 26, 0.1) 0%,
+    rgba(234, 88, 12, 0.05) 25%,
+    rgba(255, 215, 0, 0.1) 50%,
+    rgba(247, 147, 26, 0.05) 75%,
+    rgba(234, 88, 12, 0.1) 100%
+  );
+}

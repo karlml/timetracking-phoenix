@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="csrf-token" content={get_csrf_token()}>
+    <title>TimeTracker Phoenix</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'bitcoin-orange': '#F7931A',
+              'burnt-orange': '#EA580C',
+              'digital-gold': '#FFD600',
+              'true-void': '#030304',
+              'dark-matter': '#0F1115',
+              'stardust': '#94A3B8',
+              'dim-boundary': '#1E293B',
+            },
+            fontFamily: {
+              'heading': ['Space Grotesk', 'sans-serif'],
+              'body': ['Inter', 'sans-serif'],
+              'mono': ['JetBrains Mono', 'monospace'],
+            },
+          }
+        }
+      }
+    </script>
+    <link phx-track-static rel="stylesheet" href={~p"/assets/app.css"}/>
+    <script defer phx-track-static type="text/javascript" src={~p"/assets/app.js"}></script>
+  </head>
+  <body class="bg-[#030304] text-white font-body antialiased">
+    <%= @inner_content %>
+  </body>
+</html>

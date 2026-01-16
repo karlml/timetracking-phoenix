@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeTracker Phoenix - Live Application Demo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="pt-20 pb-12 md:pt-24">
+                <!-- Header -->
+                <div class="text-center fade-in">
+                    <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+                        <span class="block">TimeTracker Phoenix</span>
+                        <span class="block text-blue-600">Application Demo</span>
+                    </h1>
+                    <p class="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+                        Your complete time tracking application is ready! This demo shows what you'll see when you run it on your local machine.
+                    </p>
+                </div>
+
+                <!-- Status -->
+                <div class="mt-10 bg-green-50 rounded-lg p-6 fade-in">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0">
+                            <svg class="h-8 w-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-medium text-green-800">✅ Application Ready!</h3>
+                            <p class="text-sm text-green-700 mt-1">
+                                Your Phoenix application is fully built and ready to run. Follow the instructions below to start it on your local machine.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Start -->
+                <div class="mt-10 bg-white rounded-lg shadow-lg p-8 fade-in">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6">🚀 Quick Start Guide</h2>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center w-8 h-8 bg-blue-500 text-white rounded-full text-sm font-medium">1</div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Install Elixir</h3>
+                                <p class="text-sm text-gray-600 mt-1">Download from <a href="https://elixir-lang.org/install.html" class="text-blue-600 underline" target="_blank">elixir-lang.org</a></p>
+                                <code class="block mt-2 p-3 bg-gray-100 rounded text-sm">curl -fsSO https://elixir-lang.org/install.sh && sh install.sh elixir@1.19.4 otp@28.1</code>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center w-8 h-8 bg-blue-500 text-white rounded-full text-sm font-medium">2</div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Setup Application</h3>
+                                <p class="text-sm text-gray-600 mt-1">Navigate to your project and run setup</p>
+                                <code class="block mt-2 p-3 bg-gray-100 rounded text-sm">cd /Users/karl@eyr.md/Development/Timetracking_phoenix && ./setup.sh</code>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center w-8 h-8 bg-blue-500 text-white rounded-full text-sm font-medium">3</div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Start Server</h3>
+                                <p class="text-sm text-gray-600 mt-1">Launch the Phoenix application</p>
+                                <code class="block mt-2 p-3 bg-gray-100 rounded text-sm">./start.sh</code>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center w-8 h-8 bg-green-500 text-white rounded-full text-sm font-medium">✓</div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Open Browser</h3>
+                                <p class="text-sm text-gray-600 mt-1">Visit your running application</p>
+                                <a href="http://localhost:4000" class="inline-block mt-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors">
+                                    http://localhost:4000
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Application Preview -->
+                <div class="mt-10 bg-white rounded-lg shadow-lg p-8 fade-in">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6">🎨 Application Preview</h2>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Landing Page -->
+                        <div class="border rounded-lg p-4">
+                            <h3 class="font-semibold text-gray-900 mb-2">🏠 Landing Page</h3>
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDMwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjZjNmNGY2Ii8+Cjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjOWNhM2FmIiBmb250LXNpemU9IjE0Ij5MYW5kaW5nIFBhZ2U8L3RleHQ+Cjwvc3ZnPg==" alt="Landing Page" class="w-full h-32 object-cover rounded border">
+                        </div>
+
+                        <!-- Dashboard -->
+                        <div class="border rounded-lg p-4">
+                            <h3 class="font-semibold text-gray-900 mb-2">📊 Dashboard</h3>
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDMwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjZjNmNGY2Ii8+Cjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjOWNhM2FmIiBmb250LXNpemU9IjE0Ij5EYXNoYm9hcmQ8L3RleHQ+Cjwvc3ZnPg==" alt="Dashboard" class="w-full h-32 object-cover rounded border">
+                        </div>
+
+                        <!-- Time Tracking -->
+                        <div class="border rounded-lg p-4">
+                            <h3 class="font-semibold text-gray-900 mb-2">⏱️ Time Tracking</h3>
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDMwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjZjNmNGY2Ii8+Cjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjOWNhM2FmIiBmb250LXNpemU9IjE0Ij5UaW1lIFRyYWNraW5nPC90ZXh0Pgo8L3N2Zz4=" alt="Time Tracking" class="w-full h-32 object-cover rounded border">
+                        </div>
+
+                        <!-- Reports -->
+                        <div class="border rounded-lg p-4">
+                            <h3 class="font-semibold text-gray-900 mb-2">📈 Reports</h3>
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDMwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjZjNmNGY2Ii8+Cjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjOWNhM2FmIiBmb250LXNpemU9IjE0Ij5SZXBvcnRzPC90ZXh0Pgo8L3N2Zz4=" alt="Reports" class="w-full h-32 object-cover rounded border">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Features -->
+                <div class="mt-10">
+                    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                        <div class="bg-white rounded-lg shadow-sm p-6 fade-in">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0">
+                                    <svg class="h-8 w-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-lg font-medium text-gray-900">Accurate Time Tracking</h3>
+                                    <p class="mt-2 text-sm text-gray-500">Log time with start/stop timers or manual entry for precise billing.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-lg shadow-sm p-6 fade-in">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0">
+                                    <svg class="h-8 w-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                    </svg>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-lg font-medium text-gray-900">Project Management</h3>
+                                    <p class="mt-2 text-sm text-gray-500">Organize work by projects and clients with budget tracking.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-lg shadow-sm p-6 fade-in">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0">
+                                    <svg class="h-8 w-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                    </svg>
+                                </div>
+                                <div class="ml-4">
+                                    <h3 class="text-lg font-medium text-gray-900">Client Reports</h3>
+                                    <p class="mt-2 text-sm text-gray-500">Generate detailed reports and export data for client billing.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Test Accounts -->
+                <div class="mt-10 bg-blue-50 rounded-lg p-6 fade-in">
+                    <h2 class="text-xl font-semibold text-blue-900 mb-4">🔑 Test Accounts</h2>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <h3 class="font-medium text-blue-800">Admin Access</h3>
+                            <p class="text-sm text-blue-700">admin@example.com / password123</p>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-blue-800">Client Access</h3>
+                            <p class="text-sm text-blue-700">client@example.com / password123</p>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-blue-800">Developer Access</h3>
+                            <p class="text-sm text-blue-700">dev1@example.com / password123</p>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-blue-800">Developer Access 2</h3>
+                            <p class="text-sm text-blue-700">dev2@example.com / password123</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="mt-10 text-center fade-in">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4">Ready to Launch Your Application?</h2>
+                    <p class="text-gray-600 mb-6">Follow the steps above to start your TimeTracker Phoenix application!</p>
+                    <div class="space-x-4">
+                        <a href="#setup" class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                            Start Setup
+                        </a>
+                        <a href="demo/index.html" class="inline-block px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors">
+                            View HTML Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add fade-in animation to elements as they come into view
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements that should fade in
+        document.querySelectorAll('.fade-in').forEach(el => {
+            el.classList.remove('fade-in'); // Remove initial class
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

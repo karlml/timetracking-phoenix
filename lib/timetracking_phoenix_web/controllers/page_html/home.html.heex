@@ -1,0 +1,79 @@
+<div class="min-h-screen bg-[#030304] relative overflow-hidden">
+  <!-- Background Effects -->
+  <div class="absolute inset-0 bg-grid-pattern opacity-30"></div>
+  <div class="absolute top-0 left-1/4 w-96 h-96 bg-[#F7931A] opacity-10 blur-[120px] rounded-full"></div>
+  <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-[#FFD600] opacity-10 blur-[120px] rounded-full"></div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="pt-24 pb-24 md:pt-32 md:pb-32">
+      <!-- Hero Section -->
+      <div class="text-center">
+        <h1 class="text-4xl sm:text-5xl md:text-7xl font-heading font-bold leading-tight text-white mb-6">
+          <span class="block">Track Your Time,</span>
+          <span class="block bg-gradient-to-r from-[#F7931A] to-[#FFD600] bg-clip-text text-transparent">Bill Your Clients</span>
+        </h1>
+        <p class="mt-6 max-w-2xl mx-auto text-lg md:text-xl font-body text-[#94A3B8] leading-relaxed">
+          Professional time tracking for developers and agencies. Log hours on projects, generate client reports, and get paid for your work.
+        </p>
+        <div class="mt-10 max-w-md mx-auto sm:flex sm:justify-center gap-4">
+          <.link href={~p"/users/register"} class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-gradient-to-r from-[#EA580C] to-[#F7931A] hover:scale-105 hover:shadow-[0_0_30px_-5px_rgba(247,147,26,0.6)] text-base font-mono font-semibold text-white uppercase tracking-wider transition-all duration-300 shadow-[0_0_20px_-5px_rgba(234,88,12,0.5)]">
+            Get Started
+          </.link>
+          <.link href={~p"/users/log_in"} class="mt-4 sm:mt-0 inline-flex items-center justify-center px-8 py-4 rounded-full border-2 border-white/20 hover:border-white hover:bg-white/10 text-base font-mono font-semibold text-white uppercase tracking-wider transition-all duration-300">
+            Sign In
+          </.link>
+        </div>
+      </div>
+
+      <!-- Features Section -->
+      <div class="mt-32">
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Feature 1 -->
+          <div class="group relative bg-[#0F1115] border border-white/10 rounded-2xl p-8 hover:-translate-y-1 hover:border-[#F7931A]/50 hover:shadow-[0_0_30px_-10px_rgba(247,147,26,0.2)] transition-all duration-300">
+            <div class="flex items-start">
+              <div class="flex-shrink-0 bg-[#EA580C]/20 border border-[#EA580C]/50 rounded-lg p-3 group-hover:shadow-[0_0_20px_rgba(234,88,12,0.4)] transition-all">
+                <svg class="h-8 w-8 text-[#F7931A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-lg font-heading font-semibold text-white mb-2">Accurate Time Tracking</h3>
+                <p class="text-sm font-body text-[#94A3B8]">Log time with start/stop timers or manual entry for precise billing.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="group relative bg-[#0F1115] border border-white/10 rounded-2xl p-8 hover:-translate-y-1 hover:border-[#F7931A]/50 hover:shadow-[0_0_30px_-10px_rgba(247,147,26,0.2)] transition-all duration-300">
+            <div class="flex items-start">
+              <div class="flex-shrink-0 bg-[#EA580C]/20 border border-[#EA580C]/50 rounded-lg p-3 group-hover:shadow-[0_0_20px_rgba(234,88,12,0.4)] transition-all">
+                <svg class="h-8 w-8 text-[#F7931A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-lg font-heading font-semibold text-white mb-2">Project Management</h3>
+                <p class="text-sm font-body text-[#94A3B8]">Organize work by projects and clients with budget tracking.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="group relative bg-[#0F1115] border border-white/10 rounded-2xl p-8 hover:-translate-y-1 hover:border-[#F7931A]/50 hover:shadow-[0_0_30px_-10px_rgba(247,147,26,0.2)] transition-all duration-300">
+            <div class="flex items-start">
+              <div class="flex-shrink-0 bg-[#EA580C]/20 border border-[#EA580C]/50 rounded-lg p-3 group-hover:shadow-[0_0_20px_rgba(234,88,12,0.4)] transition-all">
+                <svg class="h-8 w-8 text-[#F7931A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                </svg>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-lg font-heading font-semibold text-white mb-2">Client Reports</h3>
+                <p class="text-sm font-body text-[#94A3B8]">Generate detailed reports and export data for client billing.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
