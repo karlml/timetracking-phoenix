@@ -7,10 +7,10 @@ services:
     plan: free
     envVars:
       - key: SECRET_KEY_BASE
-        generateValue: true
+        value: zYepSEKdoLOHKgkCIm+1uPCJ/1/NZFCWXnAEmphoO3bHrLFWRvrUoG6YgeUIeym5
       - key: DATABASE_PATH
         value: /app/timetracking.db
       - key: PHX_HOST
-        sync: false
+        value: timetracking-phoenix.onrender.com
       - key: PORT
         value: 10000
