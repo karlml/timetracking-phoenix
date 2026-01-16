@@ -13,6 +13,24 @@ defmodule TimetrackingPhoenix.Release do
     end
   end
 
+  def seed do
+    load_app()
+
+    for repo <- repos() do
+      {:ok, _, _} = Ecto.Migrator.with_repo(repo, fn repo ->
+        seed_path = Application.app_dir(@app, "priv/repo/seeds.exs")
+        if File.exists?(seed_path) do
+          Code.eval_file(seed_path)
+        end
+      end)
+    end
+  end
+
+  def migrate_and_seed do
+    migrate()
+    seed()
+  end
+
   def rollback(repo, version) do
     load_app()
     {:ok, _, _} = Ecto.Migrator.with_repo(repo, &Ecto.Migrator.run(&1, :down, to: version))

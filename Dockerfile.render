@@ -50,5 +50,5 @@ COPY --from=builder /app/_build/prod/rel/timetracking_phoenix ./
 ENV MIX_ENV=prod
 ENV PHX_SERVER=true
 
-# Run migrations and start server
-CMD ["/bin/sh", "-c", "/app/bin/timetracking_phoenix eval 'TimetrackingPhoenix.Release.migrate()' && /app/bin/timetracking_phoenix start"]
+# Run migrations, seed database, and start server
+CMD ["/bin/sh", "-c", "/app/bin/timetracking_phoenix eval 'TimetrackingPhoenix.Release.migrate_and_seed()' && /app/bin/timetracking_phoenix start"]
