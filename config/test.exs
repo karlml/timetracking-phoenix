@@ -1,5 +1,8 @@
 import Config
 
+# Use SQLite adapter for tests
+config :timetracking_phoenix, :database_adapter, Ecto.Adapters.SQLite3
+
 # Configure your database
 config :timetracking_phoenix, TimetrackingPhoenix.Repo,
   database: "timetracking_phoenix_test#{System.get_env("MIX_TEST_PARTITION")}.db",
