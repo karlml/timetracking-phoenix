@@ -32,6 +32,7 @@ defmodule TimetrackingPhoenix.MixProject do
       {:phoenix_ecto, "~> 4.4"},
       {:ecto_sql, "~> 3.10"},
       {:postgrex, ">= 0.0.0"},
+      {:ecto_sqlite3, "~> 0.10"},
       {:phoenix_html, "~> 4.0"},
       {:phoenix_html_helpers, "~> 1.0"},
       {:phoenix_live_view, "~> 0.20.1"},
