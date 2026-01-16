@@ -1,4 +1,5 @@
 # Render.com Blueprint - https://render.com/docs/blueprint-spec
+# Uses external PostgreSQL database (Neon)
 services:
   - type: web
     name: timetracking-phoenix
@@ -8,8 +9,8 @@ services:
     envVars:
       - key: SECRET_KEY_BASE
         value: zYepSEKdoLOHKgkCIm+1uPCJ/1/NZFCWXnAEmphoO3bHrLFWRvrUoG6YgeUIeym5
-      - key: DATABASE_PATH
-        value: /app/timetracking.db
+      - key: DATABASE_URL
+        sync: false
       - key: PHX_HOST
         value: timetracking-phoenix.onrender.com
       - key: PORT

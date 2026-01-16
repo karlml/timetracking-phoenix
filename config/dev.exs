@@ -1,11 +1,14 @@
 import Config
 
-# Configure your database
+# Configure your database (PostgreSQL for dev)
 config :timetracking_phoenix, TimetrackingPhoenix.Repo,
-  database: Path.expand("../timetracking_phoenix_dev.db", __DIR__),
-  pool_size: 5,
+  username: "postgres",
+  password: "postgres",
+  hostname: "localhost",
+  database: "timetracking_phoenix_dev",
   stacktrace: true,
-  show_sensitive_data_on_connection_error: true
+  show_sensitive_data_on_connection_error: true,
+  pool_size: 10
 
 # For development, we disable any cache and enable debugging
 config :timetracking_phoenix, TimetrackingPhoenixWeb.Endpoint,

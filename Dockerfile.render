@@ -1,4 +1,4 @@
-# Dockerfile for Render.com deployment
+# Dockerfile for Render.com deployment with PostgreSQL
 FROM elixir:1.15-alpine AS builder
 
 # Install build dependencies
@@ -44,8 +44,6 @@ WORKDIR /app
 
 # Copy release from builder
 COPY --from=builder /app/_build/prod/rel/timetracking_phoenix ./
-
-# Database will be stored in /app (ephemeral on free tier)
 
 ENV MIX_ENV=prod
 ENV PHX_SERVER=true

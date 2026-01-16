@@ -4,13 +4,6 @@ import Config
 # Ecto repos
 config :timetracking_phoenix, ecto_repos: [TimetrackingPhoenix.Repo]
 
-# Configure your database
-config :timetracking_phoenix, TimetrackingPhoenix.Repo,
-  database: Path.expand("../timetracking_phoenix_dev.db", __DIR__),
-  pool_size: 5,
-  stacktrace: true,
-  show_sensitive_data_on_connection_error: true
-
 # Configure Pow authentication
 config :timetracking_phoenix, :pow,
   user: TimetrackingPhoenix.Accounts.User,

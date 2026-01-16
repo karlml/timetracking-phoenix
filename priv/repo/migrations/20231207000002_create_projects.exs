@@ -10,7 +10,7 @@ defmodule TimetrackingPhoenix.Repo.Migrations.CreateProjects do
       add :hourly_rate, :decimal, precision: 10, scale: 2
       add :start_date, :date
       add :end_date, :date
-      add :client_id, references(:users, on_delete: :restrict), null: false
+      add :client_id, references(:users, on_delete: :restrict)
 
       timestamps()
     end
