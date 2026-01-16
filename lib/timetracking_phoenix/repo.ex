@@ -1,5 +1,5 @@
 defmodule TimetrackingPhoenix.Repo do
   use Ecto.Repo,
     otp_app: :timetracking_phoenix,
-    adapter: Ecto.Adapters.SQLite3
+    adapter: Application.compile_env(:timetracking_phoenix, :database_adapter, Ecto.Adapters.Postgres)
 end

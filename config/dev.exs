@@ -1,5 +1,8 @@
 import Config
 
+# Use SQLite adapter for local development
+config :timetracking_phoenix, :database_adapter, Ecto.Adapters.SQLite3
+
 # Configure your database (SQLite for local dev)
 config :timetracking_phoenix, TimetrackingPhoenix.Repo,
   database: Path.expand("../timetracking_phoenix_dev.db", __DIR__),
