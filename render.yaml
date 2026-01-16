@@ -9,12 +9,8 @@ services:
       - key: SECRET_KEY_BASE
         generateValue: true
       - key: DATABASE_PATH
-        value: /data/timetracking.db
+        value: /app/timetracking.db
       - key: PHX_HOST
         sync: false
       - key: PORT
         value: 10000
-    disk:
-      name: data
-      mountPath: /data
-      sizeGB: 1
