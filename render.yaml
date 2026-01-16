@@ -1,0 +1,20 @@
+# Render.com Blueprint - https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: timetracking-phoenix
+    runtime: docker
+    dockerfilePath: ./Dockerfile.render
+    plan: free
+    envVars:
+      - key: SECRET_KEY_BASE
+        generateValue: true
+      - key: DATABASE_PATH
+        value: /data/timetracking.db
+      - key: PHX_HOST
+        sync: false
+      - key: PORT
+        value: 10000
+    disk:
+      name: data
+      mountPath: /data
+      sizeGB: 1

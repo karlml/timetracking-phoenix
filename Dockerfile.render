@@ -1,0 +1,55 @@
+# Dockerfile for Render.com deployment
+FROM elixir:1.15-alpine AS builder
+
+# Install build dependencies
+RUN apk add --no-cache build-base git nodejs npm
+
+WORKDIR /app
+
+# Install hex + rebar
+RUN mix local.hex --force && mix local.rebar --force
+
+# Set build ENV
+ENV MIX_ENV=prod
+
+# Install dependencies
+COPY mix.exs mix.lock ./
+RUN mix deps.get --only prod
+RUN mkdir config
+
+# Copy config
+COPY config/config.exs config/prod.exs config/
+RUN mix deps.compile
+
+# Copy assets and build
+COPY assets assets
+RUN mix assets.setup
+RUN mix assets.deploy
+
+# Copy application code
+COPY lib lib
+COPY priv priv
+COPY config/runtime.exs config/
+
+# Compile and build release
+RUN mix compile
+RUN mix release
+
+# --- Runner stage ---
+FROM alpine:3.18 AS runner
+
+RUN apk add --no-cache libstdc++ openssl ncurses-libs
+
+WORKDIR /app
+
+# Copy release from builder
+COPY --from=builder /app/_build/prod/rel/timetracking_phoenix ./
+
+# Create data directory
+RUN mkdir -p /data && chmod 777 /data
+
+ENV MIX_ENV=prod
+ENV PHX_SERVER=true
+
+# Run migrations and start server
+CMD ["/bin/sh", "-c", "/app/bin/timetracking_phoenix eval 'TimetrackingPhoenix.Release.migrate()' && /app/bin/timetracking_phoenix start"]

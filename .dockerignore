@@ -1,0 +1,33 @@
+# Ignore git
+.git
+.gitignore
+
+# Ignore build artifacts
+/_build/
+/deps/
+*.ez
+
+# Ignore database files
+*.db
+*.db-shm
+*.db-wal
+
+# Ignore node modules
+/assets/node_modules/
+
+# Ignore IDE/editor files
+.elixir_ls/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Ignore test files
+/test/
+/cover/
+
+# Ignore documentation
+/doc/
+
+# Ignore demo files
+/demo/
