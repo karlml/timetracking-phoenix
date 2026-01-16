@@ -67,7 +67,7 @@ defmodule TimetrackingPhoenix.MixProject do
       test: ["ecto.create --quiet", "ecto.migrate --quiet", "test"],
       "assets.setup": ["esbuild.install --if-missing"],
       "assets.build": ["esbuild timetracking_phoenix"],
-      "assets.deploy": ["esbuild timetracking_phoenix --minify", "phoenix.digest"]
+      "assets.deploy": ["esbuild timetracking_phoenix --minify", "phx.digest"]
     ]
   end
 end
