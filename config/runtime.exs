@@ -21,7 +21,9 @@ if config_env() == :prod do
   config :timetracking_phoenix, TimetrackingPhoenix.Repo,
     url: database_url,
     pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10"),
-    socket_options: maybe_ipv6
+    socket_options: maybe_ipv6,
+    ssl: true,
+    ssl_opts: [verify: :verify_none]
 
   # The secret key base is used to sign/encrypt cookies and other secrets.
   secret_key_base =
